@@ -8,7 +8,7 @@ define({
 	/**
 	 * List of modules to activate
 	 */
-	modules: [ 'dashboard', 'navsearch', 'apphelp' ],
+	modules: [ 'dashboard', 'search', 'apphelp' ],
 
 	/**
 	 * Default Route
