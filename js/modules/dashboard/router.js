@@ -3,7 +3,11 @@
 	'./views/navbar.js',
 	'./views/index.js' ],
 
-function(App, NavBar, IndexView) {
+function(
+	App,
+	NavBar,
+	IndexView) {
+
 	/**
 	 * Router
 	 * @type	object

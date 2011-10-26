@@ -1,9 +1,13 @@
 define([
 	'app/app',
 	'./views/navbar.js',
-	'./views/index.js' ],
+	'./views/documentation.js' ],
 
-function(App, NavBar, IndexView) {
+function(
+	App,
+	NavBar,
+	DocumentationView) {
+
 	/**
 	 * Router
 	 * @type	object
@@ -12,14 +16,14 @@ function(App, NavBar, IndexView) {
 	return Backbone.Router.extend({
 
 		routes: {
-			'/help': 'docsAction'
+			'/help': 'showDocumentation'
 		},
 
 		/**
 		 * indexAction
 		 */
-		docsAction: function() {
-			IndexView.render();
+		showDocumentation: function() {
+			DocumentationView.render();
 		}
 	});
 

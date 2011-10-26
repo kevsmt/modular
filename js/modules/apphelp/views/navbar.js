@@ -2,8 +2,7 @@ define([
 	'app/app' ],
 
 function(App) {
-
-	var View = Backbone.View.extend({
+	return new (Backbone.View.extend({
 		initialize: function() {
 			this.el = App.UI.NavBar.addItem({
 				position: 'right',
@@ -29,8 +28,5 @@ function(App) {
 				}]
 			});
 		}
-	});
-
-	return new View;
-
+	}));
 });
