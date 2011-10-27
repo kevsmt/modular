@@ -1,3 +1,3 @@
 <div class="container">
-	<h4>Documentation</h4>
+	<h4>Documentation User Manual</h4>
 </div>
