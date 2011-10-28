@@ -24,9 +24,10 @@ function(config, NavBar, Container) {
 	 * initialize
 	 *
 	 * @access	public
+	 * @param		callback
 	 * @return	void
 	 */
-	this.initialize = function() {
+	this.initialize = function(callback) {
 		var hash = document.location.hash;
 
 		// Check if we have a module to load
@@ -73,9 +74,15 @@ function(config, NavBar, Container) {
 						if (!document.location.hash) {
 							document.location = config.defaultRoute;
 						}
+
+						// Execute Callback
+						if (_.isFunction(callback)) {
+							callback();
+						}
 					});
 				});
 			});
+
 		}
 	};
 

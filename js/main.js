@@ -4,13 +4,14 @@ require.config({
 	 * @type	string
 	 */
 	baseUrl: location.pathname + 'js/',
+	wait: 15,
 
 	/**
 	 * urlArgs
 	 * Comment this if you wish to cache things
 	 * @type	string
 	 */
-	urlArgs: "c=" +  (new Date()).getTime(),
+	urlArgs: "cached=" +  (new Date()).getTime(),
 
 	/**
 	 * paths
@@ -38,7 +39,9 @@ require.config({
 	callback: function() {
 		$(document).ready(function() {
 			require([ 'app/app' ], function(App) {
-				App.initialize();
+				App.initialize(function() {
+					$('#spinner').remove();
+				});
 			});
 		});
 	}
